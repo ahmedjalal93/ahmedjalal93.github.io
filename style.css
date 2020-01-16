@@ -1,0 +1,45 @@
+html {
+    padding: 0;
+    margin: 10px;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+
+#red{
+    color: red;
+}
+
+#blue{
+    color: blue;
+}
+
+#green{
+    color: green;
+}
+
+#big{
+    font: bold 28px Arial;
+}
+
+#tiny{
+    font: normal 10px Arial;
+}
+
+#font{
+    font-family:Calibri;
+}
+
+#combine{
+    font: bold 24px Calibri;
+    color: orange;
+}
+
+.styledFont{
+    font: italic 24px Calibri unset;
+}
+
+#styledImage{
+    border:8px solid orange;
+}
