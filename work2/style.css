@@ -46,6 +46,7 @@ hr{
 .navbar-header{
     background: #669;
     padding:10px;
+    margin: 0 0 0 2%;
 }
 
 .navbar-collapse{
@@ -81,11 +82,14 @@ hr{
         text-align: center;
     }
 
-
     .navbar-header{
         text-align: center;
         margin: auto;
         width:100%;
+    }
+
+    .container{
+        margin: 95px auto auto auto ;
     }
 
   }
