@@ -75,6 +75,29 @@ hr{
     
 }
 
+.figure{
+    margin: 5px;
+    box-sizing: border-box;
+    position: relative;
+
+}
+
+.figure-img{
+    float: left;
+    clear: both;
+}
+
+.figure-caption{
+    color: #fff;
+    font-weight: bolder;
+    position: absolute;
+    bottom:20px;
+    padding: 5px;
+    background: #699;
+    text-align: center;
+    width: 100%;
+}
+
 @media only screen and (max-width: 991px) {
     .navbar-nav {
         flex-direction: initial;
