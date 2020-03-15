@@ -13,13 +13,8 @@ body{
     margin: 0;
 }
 
-.container{
-    padding: 15px;
-    margin: 50px auto auto auto ;
-}
-
 h3{
-    padding: 0 15px ;
+    padding: 15px 0 0 0;
 }
 
 hr{
@@ -34,7 +29,8 @@ hr{
 }
 
 .container{
-    background: #fff;
+    padding: 15px;
+    margin: 50px auto auto auto;
 }
 
 .navbar{
