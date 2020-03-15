@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css"/>   
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css"/>   
+    <link rel="stylesheet" href="style.css"/> 
+    <script src="randomsentences.js"></script>   
     <title>About - Ahmed Jalal</title>
 </head>
 <body>
     <header class="header">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Ahmed Jalal</a>
+                <a id="randomizer" class="navbar-brand" href="#">Ahmed Jalal</a>
             </div>
             
             <div class="navbar-collapse">
@@ -46,4 +47,12 @@
                 <p align="center">Copyright Ahmed Jalal</p>
         </section>
     </footer>
+    <script>
+      var getSentence = document.getElementById("randomizer");
+      getSentence.onclick = function(){
+          var randomNumber = Math.round(Math.random() * randomSentences.length);
+          alert(randomSentences[randomNumber].sentence);
+      }
+  </script>
+</body>
 </html>
