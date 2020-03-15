@@ -61,7 +61,7 @@ hr{
 }
 
 .footer{
-    position: fixed;
+    position: relative;
     padding: 10px;
     background: #343a40;
     bottom: 0;
