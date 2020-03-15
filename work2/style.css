@@ -111,4 +111,10 @@ hr{
         margin: 95px auto auto auto ;
     }
 
+    .full{
+        width: 100%;
+        max-width: 100%;
+        flex: 100%;
+    }
+
   }
