@@ -1,14 +1,13 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var chars, upperCase, numbers, special;
+var chars, upperCase, numbers, special, passUpperCase = true, passNumbers = true, passSpecial = true, ret = "";
 
 // Write password to the #password input
 function writePassword() {
   passwordFormat();
-  var password = generatePassword();
+  generatePassword();
   var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
+  passwordText.value = ret ;
 
 }
 
@@ -67,26 +66,48 @@ function getRandom(min, max) {
 
 //generate a password for user
 function generatePassword(){
+  ret = "";
   var allChars = "abcdefghijklmnopqrstuvwxyz";
   var charsUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var charNumbers = "1234567890";
-  var charSpecial = "!@#$%^&*()_+-':;<>={}[]\/.?~ ";
-  var ret = "";
+  var charSpecial = "!@#$%^&*()_+-':;<>={}[]\/.?~";
   if(upperCase){
     allChars += charsUpper;
+    passUpperCase = false;
   }
   if(numbers){
     allChars += charNumbers;
+    passNumbers = false;
   }
   if(special){
     allChars += charSpecial;  
+    passSpecial = false;
   }
   //finding chars from included chars
   for(var i=0; i < chars; i++){
-    var randomNumber = getRandom(0,allChars.length);
+    var randomNumber = getRandom(0,(allChars.length -1));
+    var currentChar = allChars.charAt(randomNumber);
+    if(upperCase && !passUpperCase){
+      if(charsUpper.indexOf(currentChar) >= 0){
+        passUpperCase = true;
+      }
+    }
+    if(numbers && !passNumbers){
+      if(charNumbers.indexOf(currentChar) >= 0){
+        passNumbers = true;
+      }
+    }
+    if(special && !passSpecial){
+      if(charSpecial.indexOf(currentChar) >= 0){
+        passSpecial = true;
+      }
+    }
+
+
     ret += allChars.charAt(randomNumber);
-    console.log(allChars.charAt(randomNumber));
   }
-  return ret;
+  if(!passUpperCase || !passNumbers || !passSpecial){
+    generatePassword();
+  }
 }
 
