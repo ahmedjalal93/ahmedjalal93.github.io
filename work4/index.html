@@ -10,17 +10,25 @@
     <title>My Quiz</title>
 </head>
 <body>
-    <header class="container-fluid">
-        <a id="view-high-score" href="#" class="float-left">View high scores</a>
-        <div class="float-right">Time: <span id="countDown">10</span></div>
+    <header id="headers" class="container-fluid">
+        <a id="view-high-score" href="#" class="float-left" onclick="showScores()">View high scores</a>
+        <div class="float-right">Time: <span id="countDown">180</span></div>
     </header>
     <br><br><br>
     <main class="container">
         <section class="row justify-content-md-center">
-            <article class="col-8" id="quiz">
+            <article id="quiz" class="col-8 text-center">
                 <h3 class="font-weight-bold">World Geography Quiz</h3>
                 <p>Choose the right capital for each country</p>
+                <p>You have 10 questions to answer in 3 minutes</p>
+                <p>Every time you miss a question, you will lose 10 seconds</p>
                 <button id="startQuit">Start quiz</button>
+            </article>
+        </section>
+        <section class="row justify-content-md-center">
+            <article class="col-8">
+                <br/>
+                <div class="alert dialog"></div>
             </article>
         </section>
     </main>
