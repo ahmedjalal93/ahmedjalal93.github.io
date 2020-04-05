@@ -1,42 +1,17 @@
 # 04 Web APIs: Code Quiz
 
-As you proceed in your career as a web developer, you will probably be asked to complete a coding assessment, which is typically a combination of multiple-choice questions and interactive challenges. Build a timed code quiz with multiple-choice questions. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+This quiz will be about World Geography.
+You will be asked to answer 10 questions within 3 minutes.
+Every time you answer a question, you will get a response whether your answer was right or wrong 
+When you answer the the question correclty, You will earn 10 points.
+When you give a wrong answer, you will lose 10 seconds.
 
-## User Story
 
-```
-AS A coding bootcamp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
+# Approach
+I'm making 3 arrays; one array for questions; one array for answers; and one multidimentional array for the multiple choices
+I'm using the index to pair all the pieces of those three arrays.
+When the array index of the choices equals the value inside the answers array with the index of questions are the same, Then that's a right answer
+I'm making a setTimeout to clear my toast message presented to the user when answer every question
+At the end of the test. Im using JSON to save and retrieve saved data from localStorage.
+ 
 
-## Acceptance Criteria
-
-```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and score
-```
-
-The following animation demonstrates the application functionality:
-
-![code quiz](./Assets/04-web-apis-homework-demo.gif)
-
-### Review
-
-You are required to submit the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
