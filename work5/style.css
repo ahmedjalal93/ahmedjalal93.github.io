@@ -23,12 +23,13 @@ textarea{
 
 .description{
   white-space: pre-wrap;
+  width:70%;
 }
 
 .time-block{
   text-align: center;
   border: 2px;
-  padding: 25px;
+  padding: 28px;
   border-style: dotted solid dotted none;
 }
 
