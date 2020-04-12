@@ -1,0 +1,19 @@
+.cities{
+    background: #eee;
+}
+
+.list-group-item:hover{
+    background: lightblue;
+    cursor: pointer;
+}
+
+.box{
+    margin: 15px;
+    padding: 15px;
+    border: 2px solid #dcdcdc;
+    border-radius: 5px;
+}
+
+.card{
+    background: blue;
+}
