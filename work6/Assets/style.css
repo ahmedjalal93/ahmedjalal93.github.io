@@ -15,5 +15,23 @@
 }
 
 .card{
-    background: blue;
+    background: #007bff;
+    color: #fff;
+    margin:0 5px;
+    border-radius: 0;
+}
+
+.favorable{
+    background:green;
+    padding:5px;
+}
+
+.moderate{
+    background: yellow;
+    padding:5px;
+}
+
+.severe{
+    background: red;
+    padding:5px;
 }
