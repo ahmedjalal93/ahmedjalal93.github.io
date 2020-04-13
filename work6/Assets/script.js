@@ -19,7 +19,6 @@ function search(city){
     if(coords.cities.length > 0){
         localStorage.setItem("cities", JSON.stringify(coords.cities));
     }
-    console.log(coords.cities);
     searchHistory();
     getWeather(city);
 }
@@ -56,13 +55,15 @@ function getWeather(city){
         //saving the lat, long to my object
         coords.lat = resp.coord.lat;
         coords.lon = resp.coord.lon;
-        $(".box").append("<h3 class='text-capitalize'>" + city + " (" + today + ")</h3><br/>");
+        $(".box").append("<h3 class='text-capitalize'>" + city + " (" + today + ")<img src='http://openweathermap.org/img/wn/" + resp.weather[0].icon + ".png'/></h3>");
         $(".box").append("<p>Temperture: " + (~~(resp.main.temp - 273.15) * 9/5 + 32) + "F</p>");
         $(".box").append("<p>Humidity: " + resp.main.humidity + "%</p>");
         $(".box").append("<p>Wind Speed: " + resp.wind.speed + "MPH</p>");
         getUVIndex();
+        get5DayForecast();
     }).catch(function(error){
         $(".box").html("<h3>No such city</h3>");
+        $(".card-group").empty();
         console.log(error.statusText);
     })
 }
@@ -81,6 +82,32 @@ function getUVIndex(){
             uvIndex.children(":first").addClass("moderate");
         }else{
             uvIndex.children(":first").addClass("severe");
+        }
+        
+    }).catch(function(error){
+        console.log(error.statusText);
+    })
+}
+
+//get 5 day forecast 
+function get5DayForecast(){
+    $(".card-group").empty();
+    $.ajax({
+        url:`http://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&appid=ff00d24997526604f9e9b50249f6db64`
+    }).then(function(resp){
+        for(var i = 0; i<5; i++){
+            var card = $("<div class='card'>");
+            var cardBody = $("<div class='card-body'>");
+            var h5 = $("<h5>" + moment.unix(resp.daily[i].dt).format("YYYY/DD/MM") + "</h5>");
+            var img = $("<img src='http://openweathermap.org/img/wn/" + resp.daily[i].weather[0].icon + ".png'/>");
+            var p1 = $("<p>Temp: " + (~~(resp.daily[i].temp.day - 273.15) * 9/5 + 32) + "F</p>");
+            var p2 = $("<p>Humidity: " + resp.daily[i].humidity + "%</p>");
+            cardBody.append(h5);
+            cardBody.append(img);
+            cardBody.append(p1);
+            cardBody.append(p2);
+            card.append(cardBody);
+            $(".card-group").append(card);
         }
         
     }).catch(function(error){
