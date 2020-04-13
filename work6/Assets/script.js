@@ -47,7 +47,7 @@ function searchHistory(){
 function getWeather(city){
     $(".box").empty();
     $.ajax({
-        url:"http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=ff00d24997526604f9e9b50249f6db64"
+        url:"https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=ff00d24997526604f9e9b50249f6db64"
     }).then(function(resp){
         console.log(resp);
         //using moment api to get unix timestamp to date format
@@ -71,7 +71,7 @@ function getWeather(city){
 //get uv index 
 function getUVIndex(){
     $.ajax({
-        url:`http://api.openweathermap.org/data/2.5/uvi?lat=${coords.lat}&lon=${coords.lon}&appid=ff00d24997526604f9e9b50249f6db64`
+        url:`https://api.openweathermap.org/data/2.5/uvi?lat=${coords.lat}&lon=${coords.lon}&appid=ff00d24997526604f9e9b50249f6db64`
     }).then(function(resp){
         var uvIndex = $("<p>UV Index: <span>" + resp.value + "</span></p>");
         $(".box").append(uvIndex);
@@ -93,7 +93,7 @@ function getUVIndex(){
 function get5DayForecast(){
     $(".card-group").empty();
     $.ajax({
-        url:`http://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&appid=ff00d24997526604f9e9b50249f6db64`
+        url:`https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&appid=ff00d24997526604f9e9b50249f6db64`
     }).then(function(resp){
         for(var i = 0; i<5; i++){
             var card = $("<div class='card'>");
