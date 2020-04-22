@@ -1,40 +1,69 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-
-    <title>About Me</title>
-    <link rel="stylesheet" href="css/style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css"/>   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css"/> 
+    <script src="js/randomsentences.js"></script>   
+    <title>About - Ahmed Jalal</title>
 </head>
-
 <body>
-    <header class='masthead'>
-        <p class='masthead-intro'>Hi I'm</p>
-        <h1 class='masthead-heading'>Ahmed Jalal</h1>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="navbar-header">
+                <a id="randomizer" class="navbar-brand" href="#">Ahmed Jalal</a>
+            </div>
+            
+            <div class="navbar-collapse">
+              <ul class="navbar navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
     </header>
-    <section class="details">
-      <h1>Introduction</h1>
-      <p>I'm a firmware engineer. I work on embedded systems and Vehicle bus</p>
-      <h1>Where I'm From</h1>
-      <p>I'm from Iraq</p>
-      <h1>What are your favorite hobbies?</h1>
-      <p>I like to make computer softwares and small embedded systems</p>
-      <h1>What's your dream job?</h1>
-      <p>I want to open a custom design company</p>
-      <h1>Where do you live?</h1>
-      <p>I live in the cold Utah!</p>
-      <h1>Why do you want to be a web developer?</h1>
-      <p>I've been making websites since 2009. I just like to make them!</p>
-    </section>
-
-    <footer id="footer">
-        <ul class="social">
-          <li><a href="http://www.github.com/ahmedjalal93">Github</a></li>
-        </ul>
+    <br/>
+    <main class="container">
+        <section class="row">
+          <article class="col-10 bg-white full">
+            <h3>About Me</h3>
+            <hr>
+            <img class="card" width="300" src="img/image.jpg"/>
+            <h1>Introduction</h1>
+            <p>I'm a firmware engineer. I work on embedded systems and Vehicle bus</p>
+            <h1>Where I'm From</h1>
+            <p>I'm from Iraq</p>
+            <h1>What are your favorite hobbies?</h1>
+            <p>I like to make computer softwares and small embedded systems</p>
+            <h1>What's your dream job?</h1>
+            <p>I want to open a custom design company</p>
+            <h1>Where do you live?</h1>
+            <p>I live in the cold Utah!</p>
+            <h1>Why do you want to be a web developer?</h1>
+            <p>I've been making websites since 2009. I just like to make them!</p>
+          </article>
+          </section>
+    </main>
+    <footer class="">
+        <section class="footer">
+                <p align="center">Copyright Ahmed Jalal</p>
+        </section>
     </footer>
+    <script>
+      var getSentence = document.getElementById("randomizer");
+      getSentence.onclick = function(){
+          var randomNumber = Math.round(Math.random() * randomSentences.length);
+          alert(randomSentences[randomNumber].sentence);
+      }
+  </script>
 </body>
-
 </html>

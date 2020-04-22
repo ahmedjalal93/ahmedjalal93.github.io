@@ -1,70 +1,120 @@
-body {
-    color: #222222;
-    font-size: 1em;
-    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+body{
+    margin: 0;
+    padding:0;
+    color: #689;
+    background: #ddd;
 }
 
-.content-footer,
-.masthead-heading,
-.masthead-intro {
-  text-align: center;
+.header{
+    position: fixed;
+    width:100%;
+    z-index: 10;
+    padding: 0;
+    margin: 0;
 }
 
-.masthead {
-  padding: 6em 0;
-  background-image: url('../img/code.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+h3{
+    padding: 15px 0 0 0;
 }
 
-.masthead-intro {
-    margin-bottom: 0.1em;
-    font-size: 2em;
-    color: #ffffff;
+hr{
+    margin: 15px 0;
+    padding: 0;
 }
 
-.masthead-heading {
-    margin-top: -0.2em;
-    font-weight: bold;
-    font-size: 6em;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-    color: #ffffff;
+.card{
+    float: left;
+    clear: both;
+    margin: 0 10px 0 0;
 }
 
-.details {
-    max-width: 38em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
+.container{
+    padding: 15px;
+    margin: 50px auto auto auto;
 }
 
-.details > p {
-    font-weight: 300;
-    letter-spacing: 0.05em;
+.navbar{
+    padding: 0;
+    margin: 0;
+    justify-content: space-evenly;
 }
 
-.details > h2 {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin: 2em 0 1em 0;
+.navbar-header{
+    background: #669;
+    padding:10px;
+    margin: 0 0 0 2%;
 }
 
-section > h1 {
-    margin-top: 2em;
+.navbar-collapse{
+    padding: 3px;
 }
 
-#footer {
-  padding: 20px 0;
-  text-align: center;
-  background-color: #111111;
-  text-decoration: none;
+.navbar-brand{
+    opacity: 0.80;
+    font-weight: bolder;    
+    transition: text-shadow 1s, opacity ease-in-out 1s;
 }
 
-#footer a {
-  color: #ffffff;
+.navbar-brand:hover{
+    text-shadow: 1px 1px 12px #fff;
+    opacity: 1;
 }
-.social > li {
-  display: inline-block;
-  margin: 0 5px;
+
+.footer{
+    position: relative;
+    padding: 10px;
+    background: #343a40;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    border-top: 5px solid #899;
+    
 }
+
+.figure{
+    margin: 5px;
+    box-sizing: border-box;
+    position: relative;
+
+}
+
+.figure-img{
+    float: left;
+    clear: both;
+}
+
+.figure-caption{
+    color: #fff;
+    font-weight: bolder;
+    position: absolute;
+    bottom:20px;
+    padding: 5px;
+    background: #699;
+    text-align: center;
+    width: 100%;
+}
+
+@media only screen and (max-width: 991px) {
+    .navbar-nav {
+        flex-direction: initial;
+        margin: auto;
+        text-align: center;
+    }
+
+    .navbar-header{
+        text-align: center;
+        margin: auto;
+        width:100%;
+    }
+
+    .container{
+        margin: 95px auto auto auto ;
+    }
+
+    .full{
+        width: 100%;
+        max-width: 100%;
+        flex: 100%;
+    }
+
+  }
