@@ -1,0 +1,189 @@
+body{
+  background-color: #222;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.collection-item{
+  color: #6c2a7f;
+}
+
+.row {
+ background-color: #222;
+}
+
+.collection .collection-item.active {
+  background-color: #6c2a7f;
+  color: white;
+}
+
+.collection a.collection-item {
+  color:#fff;
+  background: #6c2a7f;
+}
+.collection a.collection-item:hover {
+  color: #6c2a7f
+}
+
+.card {
+  margin:0;
+  background-color: #6c2a7f;
+}
+
+.newsArticle {
+  padding: 5px;
+  font-family: sans-serif;
+  font-style: normal;
+  color:#000;
+  border-bottom:1px solid #6c2a7f;
+  display: flex;
+}
+
+.card .card-title {
+  color: #222222;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: 38px;
+}
+
+.stockPrice {
+ font-family: sans-serif;
+ text-align: center;
+ color: #eee;
+ border-width: 1px;
+}
+
+.other {
+  color: #222;
+  font-weight: bold;
+  font-size: large;
+  font-family: sans-serif;
+  text-align: center;
+}
+.btn{
+  background-color: #6c2a7f;
+  color: white;
+}
+.collection{
+  border-style: solid;
+  border-width: 2px;
+  border-color: #6c2a7f;
+}
+#stockSearch{
+background-color: white;
+}
+.nav-wrapper{
+  background-color: #222222;
+}
+
+.aside{
+  background:#fff;
+  opacity: 0.85;
+}
+.news{
+  background: #fff;
+  padding: 5px;
+  opacity: 0.90;
+}
+.nav-buttons{
+  margin-bottom: 0;
+}
+
+.top3{
+}
+
+
+.logo{
+  background:#6c2a7f;
+  border-radius:150px;
+  padding:10px;
+  box-shadow:0;
+  transition:background 2s, box-shadow 2s;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  align-content: center;
+  width:120px;
+  
+}
+.logo:hover{
+  background:#eee;
+  box-shadow:-5px 5px 10px #000;
+  transition:background 2s, box-shadow 2s;
+}
+
+.logo span{
+display:block;
+width:100px;
+height:100px;
+border-radius:150px;
+background:url(logo.png);
+background-size:cover;
+box-shadow:0;
+transition:box-shadow 2s, width 2s, height 2s;
+}
+.logo span:hover{
+box-shadow:inset 10px 10px 15px lightyellow;
+transition:box-shadow 2s, width 2s, height 2s;
+}
+
+.thumbnail{
+  float:left;
+  clear:both;
+  border: 1px solid #6c2a7f;
+  margin:0 5px 0 0;
+}
+
+.p{
+  margin:0;
+}
+
+.time{
+  color:grey;
+}
+.up {
+  color: greenyellow;
+  text-align: center;
+}
+
+.down {
+  color: red;
+  text-align: center;
+}
+
+.company-info {
+  background: #fff;
+  display: block;
+}
+
+.graph {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: white;
+}
+
+.addFavorite {
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  float:right;
+  font-size: x-large;
+  margin: 5px 5px 0px 0px;
+  background-color: #6c2a7f;
+  color: #fff
+}
+
+.clearFavorites {
+  background-color: #6c2a7f;
+  padding: 10px;
+  margin-bottom: 14px;
+  border: 0;
+  color: white;
+}
+.clearFavorites:focus{
+  background-color: #6c2a7f;;
+  color: white;
+}
