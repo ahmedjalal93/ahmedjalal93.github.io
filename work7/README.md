@@ -16,7 +16,7 @@
 ## Installation
 To install necessary dependencies, run the following command: 
 
-npm install
+`npm install`
 
 ## Usage
 This is just a test repo for school
@@ -30,7 +30,7 @@ just me
 ## Tests
 To run tests, run the following command:
 
-npm run test
+`npm run test`
 
 ## Questions
 if you have any questions contact ahmedjalal93 at ahhmedd16@hotmail.com
