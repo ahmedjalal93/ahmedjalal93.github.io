@@ -17,7 +17,7 @@ function generateMarkdown(data) {
 ## Installation
 To install necessary dependencies, run the following command: 
 
-${data.install}
+\`${data.install}\`
 
 ## Usage
 ${data.about}
@@ -31,7 +31,7 @@ ${data.contribution}
 ## Tests
 To run tests, run the following command:
 
-${data.test}
+\`${data.test}\`
 
 ## Questions
 if you have any questions contact ${data.username} at ${data.email}
