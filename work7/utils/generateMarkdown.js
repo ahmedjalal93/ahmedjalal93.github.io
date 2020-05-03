@@ -8,7 +8,7 @@ function generateMarkdown(data) {
 
 # Table of Content
 * [Installation](#installation)
-* [Usage](#uage)
+* [Usage](#usage)
 * [License](#license)
 * [Contributing](#contributing)
 * [Tests](#tests)
@@ -16,6 +16,7 @@ function generateMarkdown(data) {
 
 ## Installation
 To install necessary dependencies, run the following command: 
+
 ${data.install}
 
 ## Usage
@@ -29,6 +30,7 @@ ${data.contribution}
 
 ## Tests
 To run tests, run the following command:
+
 ${data.test}
 
 ## Questions

@@ -1,3 +1,4 @@
+fs = require('fs');
 var inquirer = require("inquirer");
 var Data = require("./data");
 var Generate = require("./utils/generateMarkdown");
@@ -74,17 +75,20 @@ const questions = [
   ];
 
 function writeToFile(fileName, data) {
-
-
+    fs.writeFile(fileName, data, function (err,data) {
+        if (err) {
+            return console.log(err);
+        }
+        console.log("Successfully generated a readme file");
+    });
 }
 
 function init() {
-
+    inquirer.prompt(questions).then(answers => {
+        var data = new Data(answers);
+        console.log(Generate(data));
+        writeToFile("README.md", Generate(data));
+    });
 }
 
 init();
-
-inquirer.prompt(questions).then(answers => {
-    var data = new Data(answers);
-    console.log(Generate(data));
-});
