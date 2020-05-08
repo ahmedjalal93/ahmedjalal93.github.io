@@ -61,7 +61,7 @@ hr{
 }
 
 .footer{
-    position: relative;
+    position: absolute;
     padding: 10px;
     background: #343a40;
     bottom: 0;
@@ -81,6 +81,7 @@ hr{
 .figure-img{
     float: left;
     clear: both;
+    opacity: 0.5;
 }
 
 .figure-caption{
