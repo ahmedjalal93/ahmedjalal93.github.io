@@ -10,4 +10,4 @@ HTML file.
 # Video
 
 Here's a video to demonstare the results
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](hw2.mp4)
+[![Watch the video](https://cdn.imgbin.com/18/13/19/imgbin-video-icon-video-icon-black-video-logo-0vnwhjDRymF2uHmK4yKjvin2n.jpg)](hw2.mp4)
