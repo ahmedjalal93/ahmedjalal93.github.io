@@ -35,3 +35,5 @@ To run tests, run the following command:
 ## Questions
 if you have any questions contact ahmedjalal93 at ahhmedd16@hotmail.com
 
+## Video
+[![Watch the video](https://cdn.imgbin.com/18/13/19/imgbin-video-icon-video-icon-black-video-logo-0vnwhjDRymF2uHmK4yKjvin2n.jpg)](hw.mp4)
