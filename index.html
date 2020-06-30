@@ -1,69 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css"/>   
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css"/> 
-    <script src="js/randomsentences.js"></script>   
-    <title>About - Ahmed Jalal</title>
-</head>
+  <title>Ahmed Jalal - Home</title>
+  <meta name="description" content="This is my offical web page"/>
+  <meta name="keywords" content="web, page, ahmed, jalal"/>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta http-equiv="Pragma" content="no-cache"/>
+  <meta http-equiv="Cache-Control" content="no-cache"/>
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <link href="css/style.css" rel="stylesheet" media="all" type="text/css"/>
+  <script type="text/javascript" src="js/general.js" charset="UTF-8"></script>
+  </head>
 <body>
-    <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="navbar-header">
-                <a id="randomizer" class="navbar-brand" href="#">Ahmed Jalal</a>
-            </div>
-            
-            <div class="navbar-collapse">
-              <ul class="navbar navbar-nav ml-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="portfolio.html">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-    </header>
-    <br/>
-    <main class="container">
-        <section class="row">
-          <article class="col-10 bg-white full">
-            <h3>About Me</h3>
-            <hr>
-            <img class="card" width="300" src="img/image.jpg"/>
-            <h4>Introduction</h4>
-            <p>I'm a firmware engineer. I work on embedded systems and Vehicle bus</p>
-            <h4>Where I'm From</h4>
-            <p>I'm from Iraq</p>
-            <h4>What are your favorite hobbies?</h4>
-            <p>I like to make computer softwares and small embedded systems</p>
-            <h4>What's your dream job?</h4>
-            <p>I want to open a custom design company</p>
-            <h4>Where do you live?</h4>
-            <p>I live in the cold Utah!</p>
-            <h4>Why do you want to be a web developer?</h4>
-            <p>I've been making websites since 2009. I just like to make them!</p>
-          </article>
-        </section>
-    </main>
-    <footer class="">
-        <section class="footer">
-                <p align="center">Copyright Ahmed Jalal</p>
-        </section>
-    </footer>
-    <script>
-      var getSentence = document.getElementById("randomizer");
-      getSentence.onclick = function(){
-          var randomNumber = Math.round(Math.random() * randomSentences.length);
-          alert(randomSentences[randomNumber].sentence);
-      }
-  </script>
+<div id="header" class="header">
+	<div id="logo" class="logo">
+		<span/>
+	</div>
+	<nav id="navigation" class="navigation" align="center">
+		<a href="#">&#9776;</a>
+		<ul>
+			<li>
+				<a href="/">About</a>
+			</li>
+			<li>
+				<a href="portfolio.html">Portfolio</a>
+			</li>
+			<li>
+				<a href="contact.html">Contact</a>
+			</li>
+			<li>
+				<a href="resume.pdf">Resume</a>
+			</li>
+		</ul>
+	</nav>
+</div>
+<div id="infobar" class="infobar">
+	<div class="wrapper">
+    <a href="#">More</a><hr>
+    <a href="#">Comming soon</a>  
+	</div>
+</div>
+<br/>
+<div class="container">
+    <h1 align="center">ABOUT ME</h1>
+    <img class="container" src="img/profile.png" width="300"/>
+		<marquee align="center" behavior="scroll" direction="up" scrollamount="1" style="width:500px;height:400px;font-size:22px;text-align:left;">
+      Hello everyone! This is Ahmed Jalal from Iraq. <br/>
+      This is my offical wepage.<br/>
+      I'm inspired by the technology world.<br/>
+      I spend time learning about computers.<br/>
+      I like to invent things and work on difficult tasks.<br/>
+      I've been a friend of computers since I was a kid.<br/>
+      I built my first webpage when I was 14 and built a search engine when I was 16.<br/>
+      I never finish my projects :(<br/>
+        Away from computers I like swimming and traveling. <br/>
+      I also like coffee shops and I talk to much, but good talk.<br/>
+      I like funny people and I hate serious never-simily people.<br/>
+      I pay attention to facial expressions and I can determine what kind of a person you are from that.
+    </marquee>
+</div>
 </body>
 </html>
